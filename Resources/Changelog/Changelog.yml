@@ -1,33 +1,4 @@
 Entries:
-- author: Mumohan
-  changes:
-  - {message: Airlocks are no longer scared of puddles and soap. They should now close
-      properly., type: Fix}
-  id: 3714
-  time: '2023-05-09T23:54:43.0000000+00:00'
-- author: notquitehadouken
-  changes:
-  - {message: Fixed the recipes for radiation shutters and glass shutters not appearing
-      in the construction menu, type: Fix}
-  id: 3715
-  time: '2023-05-09T23:56:07.0000000+00:00'
-- author: metalgearsloth
-  changes:
-  - {message: Fix popup spam in some instances., type: Fix}
-  id: 3716
-  time: '2023-05-10T00:00:59.0000000+00:00'
-- author: metalgearsloth
-  changes:
-  - {message: Wielding is now predicted., type: Tweak}
-  id: 3717
-  time: '2023-05-10T00:01:23.0000000+00:00'
-- author: tom-leys
-  changes:
-  - {message: 'Frezon is slightly harder to make. The reaction always consumes Tritium
-      and Oxygen at a 1:50 ratio. But the reaction is easier to initiate, requiring
-      only Nitrogen, Oxygen, Tritium and <73.15K.', type: Tweak}
-  id: 3718
-  time: '2023-05-10T03:27:23.0000000+00:00'
 - author: deltanedas
   changes:
   - {message: Chef's vinegar bottles now hold 30u instead of 15u., type: Tweak}
@@ -2941,3 +2912,35 @@ Entries:
       ability to produce offspring so long as they are properly tended to.', type: Add}
   id: 4213
   time: '2023-07-09T22:36:37.0000000+00:00'
+- author: Dygon
+  changes:
+  - {message: 'After a long cooperative research project botanists and chemists have
+      finally discovered how to improve bruise packs and ointment. Medicated suture
+      and regenerating mesh are now made in the microwave using a combination of bruise
+      packs/ointment, plants, cloth and chemicals.', type: Add}
+  id: 4214
+  time: '2023-07-10T02:22:11.0000000+00:00'
+- author: deltanedas
+  changes:
+  - {message: Syndicate High Command can now explicitly order for the assassination
+      of heads of staff., type: Add}
+  id: 4215
+  time: '2023-07-10T02:26:18.0000000+00:00'
+- author: Dygon
+  changes:
+  - {message: 'Clown R&D got inspired by incidents of accidentally swallowed honking
+      devices and made a minor breakthrough in clown science, bike horn implanters
+      are now available for purchase at cargo.', type: Add}
+  id: 4216
+  time: '2023-07-10T02:44:19.0000000+00:00'
+- author: dribblydrone
+  changes:
+  - {message: Added nukie guidebook, type: Add}
+  id: 4217
+  time: '2023-07-10T02:54:43.0000000+00:00'
+- author: Myakot
+  changes:
+  - {message: Removed a part of bicaridine's description that talked about non-existent
+      anti-bleeding effects and advised players to overdose on bica., type: Remove}
+  id: 4218
+  time: '2023-07-10T05:49:11.0000000+00:00'
