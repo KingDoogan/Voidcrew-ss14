@@ -73,6 +73,7 @@ namespace Content.Client.Ghost
             SubscribeLocalEvent<GhostComponent, ToggleLightingActionEvent>(OnToggleLighting);
             SubscribeLocalEvent<GhostComponent, ToggleFoVActionEvent>(OnToggleFoV);
             SubscribeLocalEvent<GhostComponent, ToggleGhostsActionEvent>(OnToggleGhosts);
+            SubscribeLocalEvent<GhostComponent, PoopBananaActionEvent>(OnPoopBanana);
         }
 
         private void OnGhostInit(EntityUid uid, GhostComponent component, ComponentInit args)
@@ -85,6 +86,7 @@ namespace Content.Client.Ghost
             _actions.AddAction(uid, component.ToggleLightingAction, null);
             _actions.AddAction(uid, component.ToggleFoVAction, null);
             _actions.AddAction(uid, component.ToggleGhostsAction, null);
+            _actions.AddAction(uid, component.PoopBananaAction, null);
         }
 
         private void OnToggleLighting(EntityUid uid, GhostComponent component, ToggleLightingActionEvent args)
@@ -117,11 +119,22 @@ namespace Content.Client.Ghost
             args.Handled = true;
         }
 
+        private void OnPoopBanana(EntityUid uid, GhostComponent component, PoopBananaActionEvent args)
+        {
+            if (args.Handled)
+                return;
+
+            // Create a new banana entity at the ghost's current location.
+            var banana = EntityManager.SpawnEntity("Banana", component.Owner.Transform.Coordinates);
+            args.Handled = true;
+        }
+
         private void OnGhostRemove(EntityUid uid, GhostComponent component, ComponentRemove args)
         {
             _actions.RemoveAction(uid, component.ToggleLightingAction);
             _actions.RemoveAction(uid, component.ToggleFoVAction);
             _actions.RemoveAction(uid, component.ToggleGhostsAction);
+            _actions.RemoveAction(uid, component.PoopBananaAction);
 
             if (uid != _playerManager.LocalPlayer?.ControlledEntity)
                 return;
